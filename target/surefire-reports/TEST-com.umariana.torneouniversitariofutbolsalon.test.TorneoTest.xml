@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.136" tests="13" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="D:\programacion\Neatbeans\TorneoUniversitarioFutbolsalon\target\test-classes;D:\programacion\Neatbeans\TorneoUniversitarioFutbolsalon\target\classes;C:\Users\Juan Goyes\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\Juan Goyes\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Juan Goyes\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\Juan Goyes\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Juan Goyes\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\Juan Goyes\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\Juan Goyes\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="user.country" value="CO"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
+    <property name="sun.java.command" value="C:\Users\Juan Goyes\AppData\Local\Temp\surefire9252356470408977293\surefirebooter-20251007083959338_3.jar C:\Users\Juan Goyes\AppData\Local\Temp\surefire9252356470408977293 2025-10-07T08-39-59_104-jvmRun1 surefire-20251007083959338_1tmp surefire_0-20251007083959338_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest"/>
+    <property name="surefire.test.class.path" value="D:\programacion\Neatbeans\TorneoUniversitarioFutbolsalon\target\test-classes;D:\programacion\Neatbeans\TorneoUniversitarioFutbolsalon\target\classes;C:\Users\Juan Goyes\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\Juan Goyes\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Juan Goyes\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\Juan Goyes\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Juan Goyes\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\Juan Goyes\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\Juan Goyes\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Juan Goyes"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\programacion\Neatbeans\TorneoUniversitarioFutbolsalon"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Juan Goyes\AppData\Local\Temp\surefire9252356470408977293\surefirebooter-20251007083959338_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19.0.2+7-44"/>
+    <property name="user.name" value="Juan Goyes"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-17\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\Juan Goyes\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\JUANGO~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="19.0.2"/>
+    <property name="user.dir" value="D:\programacion\Neatbeans\TorneoUniversitarioFutbolsalon"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;D:\putty\;C:\Users\Juan Goyes\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\GTK3-Runtime Win64\bin;C:\Users\Juan Goyes\AppData\Local\Programs\Python\Python313\;C:\Users\Juan Goyes\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Juan Goyes\scoop\shims;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Juan Goyes\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Juan Goyes\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Juan Goyes\AppData\Roaming\Composer\vendor\bin;C:\Program Files\wkhtmltopdf\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19.0.2+7-44"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="testJugadorDuplicado" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.036">
+    <system-out><![CDATA[==== Iniciando pruebas de Torneo ====
+
+--- Nuevo test iniciado ---
+✅ CP005 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testRegistrarJugador" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.004">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP003 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testJugadorEquipoNull" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.002">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP004 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testEditarJugador" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.003">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP012 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testListarEquiposVacio" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.001">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP007 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testEquipoDuplicado" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.002">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP002 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testActualizarListado" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.016">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP008 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testRegistrarEquipo" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.002">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+[CP001] Intentando registrar equipo: Tigres FC
+✅ CP001 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testListarJugadoresEquipo" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.002">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP009 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testEditarJugadorInexistente" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.002">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP013 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testListarEquipos" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.003">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP006 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testEliminarJugador" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.003">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP011 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testListarJugadoresVacio" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.003">
+    <system-out><![CDATA[
+--- Nuevo test iniciado ---
+✅ CP010 se realizo correctamente
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+</testsuite>

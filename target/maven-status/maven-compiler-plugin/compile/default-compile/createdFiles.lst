@@ -1,0 +1,8 @@
+com\umariana\torneouniversitariofutbolsalon\interfaz\PanelJugador.class
+com\umariana\torneouniversitariofutbolsalon\interfaz\PanelEquipo.class
+com\umariana\torneouniversitariofutbolsalon\interfaz\PanelListados.class
+com\umariana\torneouniversitariofutbolsalon\mundo\Torneo.class
+com\umariana\torneouniversitariofutbolsalon\mundo\Equipo.class
+com\umariana\torneouniversitariofutbolsalon\mundo\Jugador.class
+com\umariana\torneouniversitariofutbolsalon\interfaz\TorneoFrame.class
+com\umariana\torneouniversitariofutbolsalon\interfaz\PanelSalida.class
