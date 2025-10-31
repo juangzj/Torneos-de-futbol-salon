@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="1.14" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="7.434" tests="22" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="E:\Programacion\Neatbeans\Torneos-de-futbol-salon\target\test-classes;E:\Programacion\Neatbeans\Torneos-de-futbol-salon\target\classes;C:\Users\Usuario 1\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Usuario 1\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\com\mysql\mysql-connector-j\8.4.0\mysql-connector-j-8.4.0.jar;C:\Users\Usuario 1\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;"/>
+    <property name="sun.awt.enableExtraMouseButtons" value="true"/>
+    <property name="java.class.path" value="E:\Programacion\Neatbeans\Torneos-de-futbol-salon\target\test-classes;E:\Programacion\Neatbeans\Torneos-de-futbol-salon\target\classes;C:\Users\Usuario 1\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Usuario 1\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\com\mysql\mysql-connector-j\8.4.0\mysql-connector-j-8.4.0.jar;C:\Users\Usuario 1\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;C:\Users\Usuario 1\.m2\repository\com\toedter\jcalendar\1.4\jcalendar-1.4.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,10 +16,10 @@
     <property name="user.country" value="CO"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\Usuario 1\AppData\Local\Temp\surefire13327490930127600298\surefirebooter-20251009155755367_3.jar C:\Users\Usuario 1\AppData\Local\Temp\surefire13327490930127600298 2025-10-09T15-57-55_233-jvmRun1 surefire-20251009155755367_1tmp surefire_0-20251009155755367_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Usuario 1\AppData\Local\Temp\surefire4610107513281591226\surefirebooter-20251030210704480_3.jar C:\Users\Usuario 1\AppData\Local\Temp\surefire4610107513281591226 2025-10-30T21-07-04_352-jvmRun1 surefire-20251030210704480_1tmp surefire_0-20251030210704480_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest"/>
-    <property name="surefire.test.class.path" value="E:\Programacion\Neatbeans\Torneos-de-futbol-salon\target\test-classes;E:\Programacion\Neatbeans\Torneos-de-futbol-salon\target\classes;C:\Users\Usuario 1\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Usuario 1\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\com\mysql\mysql-connector-j\8.4.0\mysql-connector-j-8.4.0.jar;C:\Users\Usuario 1\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;"/>
+    <property name="surefire.test.class.path" value="E:\Programacion\Neatbeans\Torneos-de-futbol-salon\target\test-classes;E:\Programacion\Neatbeans\Torneos-de-futbol-salon\target\classes;C:\Users\Usuario 1\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Usuario 1\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;C:\Users\Usuario 1\.m2\repository\com\mysql\mysql-connector-j\8.4.0\mysql-connector-j-8.4.0.jar;C:\Users\Usuario 1\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;C:\Users\Usuario 1\.m2\repository\com\toedter\jcalendar\1.4\jcalendar-1.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Usuario 1"/>
     <property name="user.language" value="es"/>
@@ -31,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Usuario 1\AppData\Local\Temp\surefire13327490930127600298\surefirebooter-20251009155755367_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Usuario 1\AppData\Local\Temp\surefire4610107513281591226\surefirebooter-20251030210704480_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
@@ -42,7 +43,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-21\netbeans\java\maven-nblib\netbeans-eventspy.jar;C:\Program Files\NetBeans-21\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-21\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="localRepository" value="C:\Users\Usuario 1\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\USUARI~1\AppData\Local\Temp\"/>
@@ -60,9 +61,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testEliminarEquipoConJugadores" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.485">
+  <testcase name="testEliminarEquipoConJugadores" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="2.286">
     <system-out><![CDATA[==== Iniciando pruebas de Torneo ====
-Base de datos limpiada correctamente
+Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -70,8 +71,17 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testJugadorDuplicadoEnOtroEquipo" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.072">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testIniciarTorneoYaIniciado" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="1.101">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
+Conexion establecida correctamente
+
+--- Nuevo test iniciado ---
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testJugadorDuplicadoEnOtroEquipo" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.063">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -80,7 +90,7 @@ Conexion establecida correctamente
 ]]></system-out>
   </testcase>
   <testcase name="testEliminarJugadorInexistente" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.044">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -88,8 +98,8 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testRegistrarJugador" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.057">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testRegistrarJugador" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.052">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -97,8 +107,25 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testListarJugadoresPorEquipo" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.064">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testListarPartidos" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.614">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
+Conexion establecida correctamente
+
+--- Nuevo test iniciado ---
+=== Iniciando testListarPartidos ===
+Equipos registrados correctamente
+Intento de iniciar torneo: true
+Cantidad de partidos listados: 1
+Partido: ID: 46 - Leones FC vs Tigres FC (sin fecha)
+Partido local: Leones FC, visitante: Tigres FC, fecha: null
+Estado del torneo reiniciado: true
+=== testListarPartidos finalizado ===
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testListarJugadoresPorEquipo" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.059">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -106,8 +133,8 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testRegistrarJugadorEquipoInexistente" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.03">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testEliminarFechaPartido" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.527">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -115,8 +142,8 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testEditarJugador" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.061">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testRegistrarJugadorEquipoInexistente" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.027">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -124,8 +151,8 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testListarEquiposVacio" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.027">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testEditarJugador" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.054">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -133,8 +160,8 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testEliminarEquipoInexistente" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.025">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testListarEquiposVacio" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.03">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -142,8 +169,8 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testListarJugadoresEquipoVacio" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.041">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testEliminarEquipoInexistente" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.314">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -151,8 +178,53 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testEquipoDuplicado" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.034">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testListarJugadoresEquipoVacio" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.035">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
+Conexion establecida correctamente
+
+--- Nuevo test iniciado ---
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testIniciarTorneoEvitaDuplicados" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.524">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
+Conexion establecida correctamente
+
+--- Nuevo test iniciado ---
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testIniciarTorneoConEquiposImpares" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.466">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
+Conexion establecida correctamente
+
+--- Nuevo test iniciado ---
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testEquipoDuplicado" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.036">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
+Conexion establecida correctamente
+
+--- Nuevo test iniciado ---
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testIniciarTorneoConEquiposPares" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.507">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
+Conexion establecida correctamente
+
+--- Nuevo test iniciado ---
+--- Test finalizado ---
+
+]]></system-out>
+  </testcase>
+  <testcase name="testAsignarFechaPartido" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.496">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -161,7 +233,7 @@ Conexion establecida correctamente
 ]]></system-out>
   </testcase>
   <testcase name="testRegistrarEquipo" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.038">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -170,8 +242,8 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testEditarJugadorInexistente" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.033">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testEditarJugadorInexistente" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.035">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -179,8 +251,8 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testListarEquipos" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.045">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testListarEquipos" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.044">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---
@@ -188,8 +260,8 @@ Conexion establecida correctamente
 
 ]]></system-out>
   </testcase>
-  <testcase name="testEliminarJugador" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.053">
-    <system-out><![CDATA[Base de datos limpiada correctamente
+  <testcase name="testEliminarJugador" classname="com.umariana.torneouniversitariofutbolsalon.test.TorneoTest" time="0.051">
+    <system-out><![CDATA[Base de datos limpiada correctamente y torneo reiniciado
 Conexion establecida correctamente
 
 --- Nuevo test iniciado ---

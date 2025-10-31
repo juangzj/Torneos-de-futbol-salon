@@ -5,5 +5,8 @@ com\umariana\torneouniversitariofutbolsalon\mundo\Torneo.class
 com\umariana\torneouniversitariofutbolsalon\mundo\ConexionBD.class
 com\umariana\torneouniversitariofutbolsalon\mundo\Equipo.class
 com\umariana\torneouniversitariofutbolsalon\mundo\Jugador.class
+com\umariana\torneouniversitariofutbolsalon\mundo\Partido.class
+com\umariana\torneouniversitariofutbolsalon\interfaz\PanelPartidos$1.class
+com\umariana\torneouniversitariofutbolsalon\interfaz\PanelPartidos.class
 com\umariana\torneouniversitariofutbolsalon\interfaz\TorneoFrame.class
 com\umariana\torneouniversitariofutbolsalon\interfaz\PanelSalida.class

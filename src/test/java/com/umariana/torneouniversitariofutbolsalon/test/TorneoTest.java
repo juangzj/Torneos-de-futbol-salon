@@ -37,15 +37,26 @@ public class TorneoTest {
         System.out.println("--- Test finalizado ---\n");
     }
 
-    // Método auxiliar para limpiar las tablas antes de cada test
+// Método auxiliar para limpiar todas las tablas antes de cada test
     private void limpiarBaseDatos() {
-        try (Connection conn = ConexionBD.getConnection();
-             Statement st = conn.createStatement()) {
+        try (Connection conn = ConexionBD.getConnection(); Statement st = conn.createStatement()) {
+            // Deshabilitar temporalmente las restricciones de claves foráneas
+            st.execute("SET FOREIGN_KEY_CHECKS = 0");
+
+            // Limpiar tablas en el orden correcto
+            st.executeUpdate("DELETE FROM partidos");
             st.executeUpdate("DELETE FROM jugadores");
             st.executeUpdate("DELETE FROM equipos");
-            System.out.println("Base de datos limpiada correctamente");
+
+            // Reiniciar estado del torneo
+            st.executeUpdate("UPDATE estado_torneo SET iniciado = FALSE WHERE id = 1");
+
+            // Habilitar nuevamente las restricciones de claves foráneas
+            st.execute("SET FOREIGN_KEY_CHECKS = 1");
+
+            System.out.println("Base de datos limpiada correctamente y torneo reiniciado");
         } catch (Exception e) {
-            System.out.println("Error al limpiar la BD: " + e.getMessage());
+            System.out.println("Error al limpiar la base de datos: " + e.getMessage());
         }
     }
 
@@ -194,4 +205,159 @@ public class TorneoTest {
         boolean eliminado = torneo.eliminarEquipo("Equipo Fantasma");
         assertFalse(eliminado, "No debería eliminar un equipo inexistente");
     }
+    // ===================== HU-8: INICIAR TORNEO Y GENERAR PARTIDOS =====================
+
+    @Test
+    public void testIniciarTorneoConEquiposPares() {
+        torneo.registrarEquipo("Tigres FC");
+        torneo.registrarEquipo("Leones FC");
+
+        boolean iniciado = torneo.iniciarTorneo();
+        assertTrue(iniciado, "El torneo debería iniciarse con equipos pares");
+
+        var partidos = torneo.listarPartidos();
+        assertEquals(1, partidos.size(), "Debería generarse un solo partido entre los dos equipos");
+
+        var partido = partidos.get(0);
+        assertTrue(
+                (partido.getNombreEquipoLocal().equals("Tigres FC") && partido.getNombreEquipoVisitante().equals("Leones FC"))
+                || (partido.getNombreEquipoLocal().equals("Leones FC") && partido.getNombreEquipoVisitante().equals("Tigres FC")),
+                "Los equipos deben coincidir correctamente"
+        );
+
+        // Reiniciar el estado del torneo
+        torneo.actualizarEstadoTorneo(false);
+    }
+
+    @Test
+    public void testIniciarTorneoConEquiposImpares() {
+        torneo.registrarEquipo("Tigres FC");
+        torneo.registrarEquipo("Leones FC");
+        torneo.registrarEquipo("Águilas FC");
+
+        boolean iniciado = torneo.iniciarTorneo();
+        assertFalse(iniciado, "No debería permitir iniciar el torneo con número impar de equipos");
+
+        var partidos = torneo.listarPartidos();
+        assertTrue(partidos.isEmpty(), "No se deben generar partidos si la cantidad de equipos es impar");
+
+        torneo.actualizarEstadoTorneo(false);
+    }
+
+    @Test
+    public void testIniciarTorneoEvitaDuplicados() {
+        torneo.registrarEquipo("Tigres FC");
+        torneo.registrarEquipo("Leones FC");
+        torneo.registrarEquipo("Águilas FC");
+        torneo.registrarEquipo("Osos FC");
+
+        boolean iniciado = torneo.iniciarTorneo();
+        assertTrue(iniciado, "El torneo debería iniciarse correctamente");
+
+        var partidos = torneo.listarPartidos();
+        assertEquals(6, partidos.size(), "Con 4 equipos deberían generarse 6 partidos únicos");
+
+        // Validar que no haya partidos duplicados
+        for (int i = 0; i < partidos.size(); i++) {
+            for (int j = i + 1; j < partidos.size(); j++) {
+                boolean mismoLocalVisitante
+                        = (partidos.get(i).getIdEquipoLocal() == partidos.get(j).getIdEquipoLocal()
+                        && partidos.get(i).getIdEquipoVisitante() == partidos.get(j).getIdEquipoVisitante())
+                        || (partidos.get(i).getIdEquipoLocal() == partidos.get(j).getIdEquipoVisitante()
+                        && partidos.get(i).getIdEquipoVisitante() == partidos.get(j).getIdEquipoLocal());
+                assertFalse(mismoLocalVisitante, "No debería haber partidos duplicados entre los mismos equipos");
+            }
+        }
+
+        torneo.actualizarEstadoTorneo(false);
+    }
+
+    @Test
+    public void testIniciarTorneoYaIniciado() {
+        torneo.registrarEquipo("Tigres FC");
+        torneo.registrarEquipo("Leones FC");
+
+        torneo.iniciarTorneo(); // Primer inicio
+        boolean iniciado = torneo.iniciarTorneo(); // Intento segundo inicio
+        assertFalse(iniciado, "No debería iniciar el torneo si ya está en curso");
+
+        torneo.actualizarEstadoTorneo(false);
+    }
+// ===================== HU-9: VISUALIZAR Y ASIGNAR FECHAS =====================
+
+    @Test
+    public void testListarPartidos() {
+        System.out.println("=== Iniciando testListarPartidos ===");
+
+        torneo.registrarEquipo("Tigres FC");
+        torneo.registrarEquipo("Leones FC");
+        System.out.println("Equipos registrados correctamente");
+
+        boolean iniciado = torneo.iniciarTorneo();
+        System.out.println("Intento de iniciar torneo: " + iniciado);
+
+        var partidos = torneo.listarPartidos();
+        System.out.println("Cantidad de partidos listados: " + partidos.size());
+        partidos.forEach(p -> System.out.println("Partido: " + p));
+
+        assertEquals(1, partidos.size(), "Debería listar correctamente los partidos generados");
+
+        var partido = partidos.get(0);
+        System.out.println("Partido local: " + partido.getNombreEquipoLocal() + ", visitante: " + partido.getNombreEquipoVisitante() + ", fecha: " + partido.getFecha());
+
+        assertTrue(
+                (partido.getNombreEquipoLocal().equals("Tigres FC") && partido.getNombreEquipoVisitante().equals("Leones FC"))
+                || (partido.getNombreEquipoLocal().equals("Leones FC") && partido.getNombreEquipoVisitante().equals("Tigres FC")),
+                "Los nombres de los equipos no coinciden con los registrados"
+        );
+
+        assertNull(partido.getFecha(), "La fecha inicial debe ser null");
+
+        // Reiniciar el estado del torneo
+        boolean reiniciado = torneo.actualizarEstadoTorneo(false);
+        System.out.println("Estado del torneo reiniciado: " + reiniciado);
+
+        System.out.println("=== testListarPartidos finalizado ===");
+    }
+
+    @Test
+    public void testAsignarFechaPartido() {
+        torneo.registrarEquipo("Tigres FC");
+        torneo.registrarEquipo("Leones FC");
+
+        torneo.iniciarTorneo();
+        var partidos = torneo.listarPartidos();
+        int idPartido = partidos.get(0).getId();
+
+        java.sql.Date fecha = java.sql.Date.valueOf("2025-11-01");
+        boolean asignado = torneo.asignarFechaPartido(idPartido, fecha);
+        assertTrue(asignado, "La fecha debería asignarse correctamente");
+
+        partidos = torneo.listarPartidos();
+        assertEquals(fecha, partidos.get(0).getFecha(), "La fecha asignada debe coincidir");
+
+        torneo.actualizarEstadoTorneo(false);
+    }
+
+    @Test
+    public void testEliminarFechaPartido() {
+        torneo.registrarEquipo("Tigres FC");
+        torneo.registrarEquipo("Leones FC");
+
+        torneo.iniciarTorneo();
+        var partidos = torneo.listarPartidos();
+        int idPartido = partidos.get(0).getId();
+
+        java.sql.Date fecha = java.sql.Date.valueOf("2025-11-01");
+        torneo.asignarFechaPartido(idPartido, fecha);
+
+        boolean eliminado = torneo.eliminarFechaPartido(idPartido);
+        assertTrue(eliminado, "La fecha debería eliminarse correctamente");
+
+        partidos = torneo.listarPartidos();
+        assertNull(partidos.get(0).getFecha(), "La fecha del partido debe ser null después de eliminarla");
+
+        torneo.actualizarEstadoTorneo(false);
+    }
+
 }

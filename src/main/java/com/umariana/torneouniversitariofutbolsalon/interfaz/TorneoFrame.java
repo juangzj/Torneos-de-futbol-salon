@@ -45,6 +45,7 @@ public class TorneoFrame extends JFrame {
         panelEquipo = new PanelEquipo(torneo, panelSalida);
         panelJugador = new PanelJugador(torneo, panelSalida);
         panelListados = new PanelListados(torneo, panelSalida);
+        PanelPartidos panelPartidos = new PanelPartidos(torneo, panelSalida);
 
         // Sincronizar combo de equipos
         panelEquipo.setPanelJugador(panelJugador);
@@ -55,6 +56,7 @@ public class TorneoFrame extends JFrame {
         tabs.addTab("Equipos", panelEquipo);
         tabs.addTab("Jugadores", panelJugador);
         tabs.addTab("Listados", panelListados);
+        tabs.addTab("Partidos", panelPartidos);
 
         add(tabs, BorderLayout.CENTER);
         add(panelSalida, BorderLayout.SOUTH);
