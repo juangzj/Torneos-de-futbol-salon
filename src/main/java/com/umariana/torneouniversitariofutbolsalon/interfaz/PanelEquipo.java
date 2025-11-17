@@ -168,4 +168,27 @@ public class PanelEquipo extends JPanel {
     public void setPanelListados(PanelListados panelListados) {
         this.panelListados = panelListados;
     }
+
+    // ======= Nuevo metodo refrescar para limpiar la interfaz luego de reiniciar torneo =======
+    public void refrescar() {
+        // Vaciar campo de registro
+        txtNombreEquipo.setText("");
+
+        // Recargar lista desde BD (si BD vacia mostrara "No hay equipos registrados")
+        cargarEquiposDesdeBD();
+
+        // Notificar a paneles relacionados que se actualicen si existen
+        if (panelJugador != null) {
+            try {
+                panelJugador.cargarEquipos();
+            } catch (Throwable ignored) {
+            }
+        }
+        if (panelListados != null) {
+            try {
+                panelListados.cargarEquipos();
+            } catch (Throwable ignored) {
+            }
+        }
+    }
 }

@@ -24,6 +24,8 @@ public class TorneoFrame extends JFrame {
     private PanelJugador panelJugador;
     private PanelListados panelListados;
     private PanelSalida panelSalida;
+    private PanelPartidos panelPartidos;
+    private PanelTorneo panelTorneo;
 
     public TorneoFrame() {
         torneo = new Torneo();
@@ -40,16 +42,21 @@ public class TorneoFrame extends JFrame {
         lblTitulo.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         add(lblTitulo, BorderLayout.NORTH);
 
-        // Crear paneles
+        // Crear panel de salida primero
         panelSalida = new PanelSalida();
+
+        // Crear paneles principales en orden
         panelEquipo = new PanelEquipo(torneo, panelSalida);
         panelJugador = new PanelJugador(torneo, panelSalida);
         panelListados = new PanelListados(torneo, panelSalida);
-        PanelPartidos panelPartidos = new PanelPartidos(torneo, panelSalida);
+        panelPartidos = new PanelPartidos(torneo, panelSalida);
 
-        // Sincronizar combo de equipos
+        // Pasar referencias para sincronizacion
         panelEquipo.setPanelJugador(panelJugador);
         panelEquipo.setPanelListados(panelListados);
+
+        // Panel Torneo recibe referencias para refrescar todo al reiniciar
+        panelTorneo = new PanelTorneo(torneo, panelEquipo, panelJugador, panelListados, panelPartidos, panelSalida);
 
         // Panel central con pestañas
         JTabbedPane tabs = new JTabbedPane();
@@ -57,6 +64,7 @@ public class TorneoFrame extends JFrame {
         tabs.addTab("Jugadores", panelJugador);
         tabs.addTab("Listados", panelListados);
         tabs.addTab("Partidos", panelPartidos);
+        tabs.addTab("Torneo", panelTorneo);
 
         add(tabs, BorderLayout.CENTER);
         add(panelSalida, BorderLayout.SOUTH);
